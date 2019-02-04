@@ -15,8 +15,8 @@ ADD avocado-2.0.57-1.x86_64.rpm /usr
 ADD install_adpl.sh /usr
 
 #RUN sed  's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/subscription-manager.conf > /etc/yum/pluginconf.d/subscription-manager.mod && mv /etc/yum/pluginconf.d/subscription-manager.mod /etc/yum/pluginconf.d/subscription-manager.conf
-RUN sed  's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/rhnplugin.conf > /etc/yum/pluginconf.d/rhnplugin.mod && mv /etc/yum/pluginconf.d/rhnplugin.mod /etc/yum/pluginconf.d/rhnplugin.conf
-RUN yum -y update
+#RUN sed  's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/rhnplugin.conf > /etc/yum/pluginconf.d/rhnplugin.mod && mv /etc/yum/pluginconf.d/rhnplugin.mod /etc/yum/pluginconf.d/rhnplugin.conf
+#RUN yum -y update
 #RUN ./install_adpl.sh -i -o  192.168.100.141 -p /avocado_2.0.51_amd64.deb  -f -m
 RUN /usr/install_adpl.sh -i -o  192.168.100.141 -p /usr/avocado-2.0.57-1.x86_64.rpm  -f -m
 #RUN sed "/^.*orchestrator.*$/d" /etc/hosts > /etc/hosts.new; echo "192.168.100.141   orchestrator " >> /etc/hosts.new; cp /etc/hosts.new /etc/hosts
