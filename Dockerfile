@@ -4,7 +4,8 @@
 # http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 
 #FROM       ubuntu:16.04
-FROM centos:7
+#FROM centos:7
+FROM base-centos7
 #ENV container docker
 #MAINTAINER Docker
 
